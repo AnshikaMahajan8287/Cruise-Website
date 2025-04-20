@@ -1,0 +1,418 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+color: aliceblue;
+font-family: sans-serif;
+}
+body{
+    background-image: url('image\ copy.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index:-1;
+   
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+#nav{
+    height: 145;
+    width:100% ;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:40px;
+    padding:  0 150px;
+    position: fixed;
+    z-index: 99;
+
+}
+
+#nav img{
+    width: 90px;
+    height: auto;
+    border-radius: 50%;
+}
+#nav h4{
+    text-transform: uppercase;
+}
+#html,body{
+    height: 100%;
+    perspective: 800px;
+    width: 100%;
+}
+
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.526);
+
+}
+#page1{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index:10
+  
+}
+#page1 h1{
+    font-size: 70px;
+    font-weight: 900;
+    margin: 10px;
+    position: relative;
+}
+#page1 h1::before{
+    content: "Friends who cruise together, stay together";
+    position: absolute;
+    color: black;
+    top:-6px;
+    left:-6px;
+    -webkit-text-stroke: 1px #95C11E;
+    z-index:-1 ;
+     
+}
+#page1 h2{
+  font-size: 33px;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+}
+#page1 p{
+    font-size: 20px;
+  font-weight: 500;
+  width: 50%;
+}
+#page2{
+   min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+
+}
+#scroller{
+
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration:20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+#scroller h4{
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+margin-right: 10px;
+transition: all linear 0.5s;
+color:transparent;
+-webkit-text-stroke: 2px rgb(179, 251, 36);
+}
+#scroller h4:hover{
+ color:#95C11E
+}
+@keyframes scroll{
+  from{
+    transform: translateX(0);
+  }to{
+    transform: translateX(-100%);
+  }
+}
+#about-us {
+    margin-top:55px;
+    height: 60vh;
+    width: 100%;
+   
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    align-items: center;
+     position: relative; 
+    z-index: 10; 
+    justify-content: space-around;
+
+
+}
+
+#about-us img{
+    height: 320px;
+    width: 290px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+#about-us-in{
+    width: 40%;
+    text-align: center;
+
+}
+#about-us-in h3{
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+#about-us-in p{
+    font-size: 20px;
+    line-height: 26px;
+    text-align:justify;
+   
+}
+
+
+#cards-container{
+    margin-top: 60px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:70px;
+  position: relative;
+  z-index: 10;
+
+}
+
+.card{
+    height: 80%;
+    width: 24%;
+    background-color: aqua;
+    border-radius: 20px;
+    background-size: cover;
+  background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.8s;
+}
+#card1{
+    background-image: url('image\ copy\ 4.png');
+
+}
+#card2{
+    background-image: url('image\ copy\ 5.png');
+}
+#card3{
+    background-image: url('image\ copy\ 8.png');
+
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    padding: 30px;
+    padding-top: 90px;
+    opacity: 0;
+    transition: all ease 0.8s;
+}
+
+.overlay h4{
+    color: black;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 800;
+    white-space:nowrap;
+    margin-bottom: 20px;
+}
+.overlay p{
+    font-size: 18px;
+    color: rgb(46, 42, 42);
+    
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+.card:hover{
+    transform: rotate3d(-1,1,0,20deg);
+}
+
+#green-div{
+    margin-top: 25px;
+    height: 30vh;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+ background:linear-gradient(to left bottom,#36993b,#ACE022);
+
+
+
+}
+
+#green-div h4{
+    margin-top: 100px;
+    width: 50%;
+  color:black;
+  line-height: 50px;
+  text-align: center;
+
+font-size: 23px;
+text-transform: uppercase;
+
+
+
+}
+#green-div img{
+    height: 100%;
+    object-fit: cover;
+    width: 14%;
+    z-index:2;
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#page3>p{
+    width: 60%;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 45px;
+    text-align: center;
+}
+#page3 img{
+    position: absolute;
+    height: 100px;
+    
+
+}
+#page3 #colon1{
+    left:10%;
+    top:10%;
+}
+#page3 #colon2{
+    bottom: 10%;
+    right: 10%;
+}
+#colon2{
+    transform: rotateX(180deg) scale(-1);
+}
+
+#page4{
+    height:50vh;
+    width:100%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:70px;
+    position: relative;
+}
+.elem {
+height: 40%;
+width: 26%;
+overflow: hidden;
+border-radius: 20px;
+position: relative;
+}
+.elem h2{
+    height: 100%;
+    width: 100%;
+    background-color: #c0f530;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:40px ;
+    color: black;
+    font-weight: 800;
+    position: absolute;
+    z-index: 10;
+    transition: all ease 0.5s;
+}
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+    scale:1.1;
+}
+
+.elem:hover h2{
+    color: aliceblue;
+    background-color: transparent;
+}
+.elem:hover img{
+    scale:1;
+}
+#page4 h1{
+    white-space: nowrap;
+    font-size: 90px;
+    position: absolute;
+    font-weight: 900;
+    top:12%;
+    color: black;
+    -webkit-text-stroke: 2px whitesmoke;
+}
+#footer{
+    height: 40vh;
+    width: 100%;
+    background:linear-gradient(to left bottom ,#119F3A,#ACE022);
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:150px;
+    padding:0 100px;
+}
+#f1 img{
+   height: 100px;
+   border-radius: 50%;
+   box-shadow:10px 9px 14px azure,-10px -8px 14px black;
+   
+}
+#f1 img:hover{
+   transform: scaleX(1.09);
+   
+}
+#f1,#f2,#f3{
+    width: fit-content;
+    position: relative;
+    z-index:2
+}
+#f2 h3{
+    font-size: 30px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 900;
+    margin-top: 25px;
+    margin-bottom: 8px;
+ 
+}
+#f2 h3:hover{
+
+    text-shadow: 6px 8px 9px white;
+}
+#f3 h3{
+    font-size: 30px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 900;
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+#f3 h3:hover{
+    text-shadow: 6px 8px 9px white;
+}
+#f4 h4{
+    font-size: 20px;
+    color: brown;
+}
+#f4 h4:hover{
+    text-shadow: 6px 8px 9px white;
+}
